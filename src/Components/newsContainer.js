@@ -18,7 +18,7 @@ function Newscontainer() {
       console.log("Enter has been pressed");
       const timeEnterIsPressed = new Date();  
       await axios.post(
-        "http://localhost:3001/test1/timePost", 
+        "https://stocknewsmernapi.onrender.com/test1/timePost", 
           { search: text,
             time: timeEnterIsPressed },
           {
@@ -46,7 +46,7 @@ function Newscontainer() {
 
   useEffect(()=>{
     async function getDailyFetchedNews() {
-      await axios.get("http://localhost:3001/test1/timeDailyPosts")
+      await axios.get("https://stocknewsmernapi.onrender.com/test1/timeDailyPosts")
       .then((res)=>{
         setArticle(res.data.data);
       });
